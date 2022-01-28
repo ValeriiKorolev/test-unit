@@ -45,4 +45,19 @@ public class Person {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() == obj.getClass()) {
+            Person other = (Person) obj;
+            if(other.name.equals(name) && other.family.equals(family) && other.age==age && other.sex==sex && other.education == education) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
